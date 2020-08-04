@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import backicon from '../../assets/images/icons/back.svg';
 import logoImg from '../../assets/images/logo.svg';
 
+import './styles.css';
+
 interface Props {
   title: string;
 }

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import PageHeader from '../../components/PageHeader';
+import TeacherItem from '../../components/TeacherItem';
+
 
 import './styles.css';
-import PageHeader from '../../components/PageHeader';
 
 export default function TeacherList() {
     return (
@@ -27,6 +29,15 @@ export default function TeacherList() {
                     </div>
                 </form>
             </PageHeader>
+
+            <main>
+                <TeacherItem />
+                <TeacherItem />
+                <TeacherItem />
+                <TeacherItem />
+                <TeacherItem />
+                <TeacherItem />
+            </main>
     
         </div>
     )
