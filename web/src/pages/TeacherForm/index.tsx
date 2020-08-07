@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './styles.css';
 import PageHeader from '../../components/PageHeader';
@@ -22,6 +23,8 @@ export default function TeacherForm() {
         { week_day: '', from: '', to: '' }
     ]);
 
+    const history = useHistory();
+
     function addNewScheduleItem() {
         setScheduleItems([
             ...scheduleItems,
@@ -43,7 +46,10 @@ export default function TeacherForm() {
         };
 
         api.post('/classes', data)
-            .then(() => alert('Cadastro realizado com sucesso!!'))
+            .then(() => {
+                alert('Cadastro realizado com sucesso!!')
+                history.push('/');
+            })
             .catch(() => alert('Erro no cadastro'));
     }
 
