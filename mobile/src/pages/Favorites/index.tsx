@@ -3,7 +3,7 @@ import { View, ScrollView } from 'react-native'
 
 import styles from './styles';
 import PageHeader from '../../components/PageHeader';
-import TeacherItem from '../../components/TeacherItem';
+import TeacherItem, { TeacherProps } from '../../components/TeacherItem';
 
 export default function Favorites() {
     return (
@@ -17,9 +17,7 @@ export default function Favorites() {
                     paddingBottom: 24
                 }}
             >
-                <TeacherItem />
-                <TeacherItem />
-                <TeacherItem />
+            
             </ScrollView>
         </View>
     )
