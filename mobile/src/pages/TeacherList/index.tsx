@@ -10,6 +10,7 @@ import { TextInput, BorderlessButton, RectButton } from 'react-native-gesture-ha
 
 import { Feather } from '@expo/vector-icons';
 import api from '../../services/api';
+import { useFocusEffect } from '@react-navigation/native';
 
 interface TeacherProps {
     user_id: number;
@@ -41,6 +42,10 @@ export default function TeacherList() {
             }
         })
     }
+
+    useFocusEffect(() => {
+        loadFavorites();
+    })
 
     function handleToggleFiltersVisible() {
         setFiltersVisible(!isFiltersVisbile);
